@@ -13,10 +13,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute([$myUsername, $password]);
         $user = $stmt->fetch();
 
-        if(empty($password) || empty($myUsername)) {
-            $_SESSION['error_msg'] = '<span>Veuillez remplir les champs</span>';
-        }
 
+        // Not yet working :
+        // if(empty($password) || empty($myUsername)) {
+        //     $_SESSION['error_msg'] = '<span>Veuillez remplir les champs</span>';
+        // }
+
+
+// verifying that the inputed data is correct, (is_array($user) ...) is here because $user has a boolean value.
         if (is_array($user) && $myUsername && $password === $user['Password']) {
             header('location: success.php');
             exit;
@@ -27,6 +31,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Error: " . $e->getMessage());
     }
 }
-
-// session true false tant que non identifié
-// verifier select 

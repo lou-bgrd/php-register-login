@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = ($_POST["Email"]);
     $password = ($_POST["Password"]);
 
+    // Series of ifs preventing blanks
     if (empty($myUsername)) {
         die("Veuillez insérer un nom d'utilisateur");
     }
@@ -21,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Veuillez choisir un mdp");
     }
 
-    // insertion des données 
+    // Data insertion via SQL command and redirection to the login page
     try {
         $stmt = $pdo->prepare("INSERT IGNORE INTO users (Username, Email, Password) VALUES(?, ?, ?)");
         $stmt->bindParam(1, $myUsername);
@@ -33,5 +34,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Error: " . $e->getMessage());
     }
 }
-
-
