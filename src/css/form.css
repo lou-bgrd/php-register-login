@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    background-color: beige;
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 32px;
+
+}
