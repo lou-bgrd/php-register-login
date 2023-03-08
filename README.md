@@ -3,6 +3,6 @@ for this i used wampservers https://www.wampserver.com/
 
 Put this project into the www folder, which is located in the wamp64 folder.
 
-Have a good day.
+Have a beautiful day.
 
 Yours truly, L.B.
