@@ -23,15 +23,15 @@
             </div>
             <div>
                 <label for="">Nom d'utilisateur </label>
-                <input class="form-control type="text" name="Username" />
+                <input class="form-control type=" text" name="Username" />
             </div>
             <div>
                 <label for="Email">Email</label>
-                <input class="form-control type="text" name="Email" />
+                <input class="form-control" type="text" name="Email" />
             </div>
             <div>
                 <label for="Password">Mot de passe</label>
-                <input class="form-control type="text" name="Password" />
+                <input class="form-control" type="password" name="Password" />
             </div>
             <input class="btn btn-secondary align-self-center" type="submit" name="register" value="Sign up" />
         </form>

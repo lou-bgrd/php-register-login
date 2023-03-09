@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // }
 
 
-// verifying that the inputed data is correct, (is_array($user) ...) is here because $user has a boolean value.
+        // verifying that the inputed data is correct, (is_array($user) ...) is here because $user has a boolean value.
         if (is_array($user) && $myUsername && $password === $user['Password']) {
             header('location: success.php');
             exit;

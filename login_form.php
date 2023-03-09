@@ -25,7 +25,7 @@
             </div>
             <div>
                 <label for="Password">Mot de passe :</label>
-                <input  class="form-control "type="text" name="Password">
+                <input  class="form-control "type="password" name="Password">
             </div>
             <input class="btn btn-secondary align-self-center" type="submit">
     </div>

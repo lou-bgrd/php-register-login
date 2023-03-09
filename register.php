@@ -24,6 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Data insertion via SQL command and redirection to the login page
     try {
+        // creating the table needed to insert data
+        $createTB = "CREATE TABLE IF NOT EXISTS users (Id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+        Username VARCHAR(80) NOT NULL, 
+        Email VARCHAR(80) NOT NULL,
+        Password VARCHAR(80) NOT NULL)
+        ENGINE = InnoDB";
+        $pdo->exec($createTB);
         $stmt = $pdo->prepare("INSERT IGNORE INTO users (Username, Email, Password) VALUES(?, ?, ?)");
         $stmt->bindParam(1, $myUsername);
         $stmt->bindParam(2, $email);
