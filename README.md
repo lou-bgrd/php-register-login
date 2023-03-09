@@ -1,5 +1,5 @@
-To use this system you need to create a database (commands are in the sql file) and uses localhost server :
-for this i used wampservers https://www.wampserver.com/ 
+To use this system you to be connected to your localhost server :
+for this exercise i used wampservers https://www.wampserver.com/ 
 
 Put this project into the www folder, which is located in the wamp64 folder.
 
